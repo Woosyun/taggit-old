@@ -1,0 +1,93 @@
+input,
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  color: #0f0f0f;
+  background-color: #ffffff;
+  transition: border-color 0.25s;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+    border-color: #396cd8;
+}
+button:active {
+  border-color: #396cd8;
+  background-color: #e8e8e8;
+}
+
+input,
+button {
+  outline: none;
+}
+
+#tagbar {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-left: var(--aside-width);
+}
+.tag-item {
+    background-color: rgba(141, 140, 140, 0.111);
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+#note-container{
+    display: grid;
+
+}
+.note {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
+}
+.note-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.note-content:hover {
+    cursor: pointer;
+    background-color: rgba(141, 140, 140, 0.111);
+}
+
+#note-option-popover {
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 20rem;
+    height: 20rem;
+    padding: 5px;
+    z-index: 1;
+}
+
+@media (max-width: 600px) {
+    #item-container {
+        grid-template-columns: repeat(auto-fill, minmax(100%, auto));
+    }
+}
+@media (min-width: 610px) and (max-width: 1024px) {
+    #item-container {
+        grid-template-columns: repeat(auto-fill, minmax(50%, auto));
+    }
+}
+@media (min-width: 1025px) {
+    #item-container {
+        grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+    }
+}
