@@ -1,3 +1,7 @@
+:root {
+    --aside-width: 5vw;
+}
+
 input,
 button {
   border-radius: 8px;
@@ -35,7 +39,8 @@ button {
     margin-top: 1rem;
     margin-left: var(--aside-width);
 }
-.tag-item {
+
+.badge {
     background-color: rgba(141, 140, 140, 0.111);
     padding: 0.25rem;
     border-radius: 0.5rem;
@@ -43,26 +48,19 @@ button {
     text-align: center;
 }
 
-#note-container{
+#note-item-container{
     display: grid;
-
+    grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+    min-height: 10vh;
+    max-height: 100vh;
+    margin-left: var(--aside-width);
 }
-.note {
+.note-item {
     display: flex;
     justify-content: space-between;
     border: 1px solid black;
     border-radius: 5px;
     margin: 5px;
-}
-.note-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-.note-content:hover {
-    cursor: pointer;
-    background-color: rgba(141, 140, 140, 0.111);
 }
 
 #note-option-popover {
@@ -77,17 +75,17 @@ button {
 }
 
 @media (max-width: 600px) {
-    #item-container {
+    #note-item-container {
         grid-template-columns: repeat(auto-fill, minmax(100%, auto));
     }
 }
 @media (min-width: 610px) and (max-width: 1024px) {
-    #item-container {
+    #note-item-container {
         grid-template-columns: repeat(auto-fill, minmax(50%, auto));
     }
 }
 @media (min-width: 1025px) {
-    #item-container {
+    #note-item-container {
         grid-template-columns: repeat(auto-fill, minmax(20%, auto));
     }
 }

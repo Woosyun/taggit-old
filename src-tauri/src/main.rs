@@ -3,7 +3,7 @@
 
 mod db;
 mod types;
-use db::find_notes_by_tags;
+use db::{find_notes_by_tags, insert_notes_with_tags};
 
 use tauri::Manager;
 use std::path::PathBuf;
@@ -18,7 +18,8 @@ fn main() {
             Ok(())
         })
         .invoke_handler(tauri::generate_handler![
-            find_notes_by_tags
+            find_notes_by_tags,
+            insert_notes_with_tags
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

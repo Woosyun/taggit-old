@@ -11,16 +11,19 @@
   <body>
 
     <header>
-      <form id="search-form">
-        <input type="text" id="tag-input" placeholder="Enter a tag" />
+      <form id="searchbar">
+        <input type="text" id="search-input" placeholder="Enter a tag" />
         <button type="submit">search</button>
       </form>
+
       <p id="tagbar"></p>
     </header>
     
     <main>
-      <div id="note-container"></div>
+      <div id="note-item-container"></div>
     </main>
+
+    <div id="note-option-popover" popover></div>
 
     </body>
 </html>

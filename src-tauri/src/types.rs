@@ -2,13 +2,13 @@ use serde::Serialize;
 
 #[derive(Debug, Serialize)]
 pub struct Note {
-    id: String,
+    id: i64,
     name: String,
     path: String,
-    last_modified: String
+    last_modified: u64
 }
 impl Note {
-    pub fn new(id: String, name: String, path: String, last_modified: String) -> Note {
+    pub fn new(id: i64, name: String, path: String, last_modified: u64) -> Note {
         Note {
             id,
             name,
